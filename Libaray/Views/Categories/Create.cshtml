@@ -1,0 +1,33 @@
+﻿@model Libaray.Models.Category
+
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+
+<div class="flex-column h-100 w-100 align-items-center justify-content-center d-flex">
+    <div class="d-flex flex-column align-items-center justify-content-center  bg-white  w-100 h-50 p-5 border rounded-3">
+        <div class="fs-5">Create New Category</div>
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div class="d-flex flex-column gap-2">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CategoryName" class="control-label"></label>
+                    <input asp-for="CategoryName" class="form-control" />
+                    <span asp-validation-for="CategoryName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageFile" class="control-label">image</label>
+                    <input asp-for="ImageFile" class="form-control" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                   
+                    <button type="submit" class="btn btn-primary w-100">Add category</button>
+                </div>
+            </div>
+           
+        </form>
+        </div>
+        </div>
+

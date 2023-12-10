@@ -1,0 +1,42 @@
+﻿@model Libaray.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null;
+}
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/Libaray.styles.css" asp-append-version="true" />
+<div class="flex-column h-100 w-100 align-items-center justify-content-center d-flex">
+    <div class="d-flex flex-column align-items-center justify-content-center  bg-white w-50 h-80 p-5 border rounded-3">
+        <div class="fs-5">Regstration</div>
+        <div class="w-100">
+            <form asp-action="Create">
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2 w-100">
+                    <div class="d-flex flex-column gap-2 w-75">
+                        <label asp-for="Username" class="control-label"></label>
+                        <input asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="d-flex flex-column gap-2 w-75">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="d-flex flex-column gap-2 w-75">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="px-5 py-2 m-0 w-75 border-0 rounded-3 hover:">Regstration</button>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Login</a>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+</div>
+
+

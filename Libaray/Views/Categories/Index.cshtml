@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Libaray.Models.Category>
+
+@{
+    ViewData["Title"] = "Category";
+}
+
+<div class="container">
+    <h1>Category</h1>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/Images/@item.ImagePath" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.CategoryName)</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

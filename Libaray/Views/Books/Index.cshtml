@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Libaray.Models.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class="container">
+    <h1>Books</h1>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/Images/@item.ImagePath" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                        <p class="card-text">Author: @Html.DisplayFor(modelItem => item.Author)</p>
+                        <p class="card-text">Price: @Html.DisplayFor(modelItem => item.Price)</p>
+                        <p class="card-text">Year: @Html.DisplayFor(modelItem => item.PublicationYear)</p>
+                        <p class="card-text">Category: @Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
+                    </div>
+                </div>
+            </div>
+        }
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/Images/@item.ImagePath" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                        <p class="card-text">Author: @Html.DisplayFor(modelItem => item.Author)</p>
+                        <p class="card-text">Price: @Html.DisplayFor(modelItem => item.Price)</p>
+                        <p class="card-text">Year: @Html.DisplayFor(modelItem => item.PublicationYear)</p>
+                        <p class="card-text">Category: @Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
